@@ -15,12 +15,10 @@ class Model{
         die("Connection failed: " . $conn->connect_error);
         echo "Koneksi ke database gagal!";
     }
-    // Query untuk memeriksa login
     $sql = "SELECT * FROM mahasiswa";
 
     $result = $conn->query($sql);
     $array = array();
-
     while ($row = $result->fetch_assoc()) {
         $array[] = $row;
     
