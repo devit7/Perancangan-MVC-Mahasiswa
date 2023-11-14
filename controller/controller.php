@@ -13,8 +13,6 @@ class Controller{
     public function index(){
         $mahasiswa = $this->model->getMahasiswaList();
         include 'view/listmahasiswa.php';
-
-        
     }
 }
 
