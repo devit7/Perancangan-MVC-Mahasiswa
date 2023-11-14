@@ -40,8 +40,8 @@
             <td><?= $mhs['nama'] ?></td>
             <td><?= $mhs['prodi'] ?></td>
             <td>
-                <a href="index.php?action=edit_mahasiswa&id=<?= $mhs['id'] ?>">Edit</a>
-                <a href="index.php?action=delete_mahasiswa&id=<?= $mhs['id'] ?>">Delete</a>
+                <a class="edit" href="index.php?action=edit_mahasiswa&id=<?= $mhs['id'] ?>">Edit</a>
+                <a class="delete" href="index.php?action=delete_mahasiswa&id=<?= $mhs['id'] ?>">Delete</a>
             </td>
         </tr>
     <?php endforeach; ?>
