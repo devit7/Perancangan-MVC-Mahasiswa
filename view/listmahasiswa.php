@@ -10,25 +10,39 @@
     <br><br>
     <div>
         <form action="index.php?action=post_mahasiswa" method="POST">
-            <label for="nim">NIM</label>
-            <input type="text" name="id" id="nim">
+            <label for="nim">Tahun Ajaran</label>
+            <input type="number" name="tahun_ajar" min='2015' max='2024' required>
             <label for="nama">Nama</label>
-            <input type="text" name="nama" id="nama">
+            <input type="text" name="nama" id="nama" required>
             <label for="prodi">Prodi</label>
-            <input type="text" name="prodi" id="prodi">
-            <input type="submit" name="submit" value="Submit">
+            <select name="prodi" id="prodi" required>
+                <option value="">Pilih Prodi</option>
+                <option value="Teknik Informatika">Teknik Informatika</option>
+                <option value="Sistem Informasi">Sistem Informasi</option>
+                <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+            </select>
+            <input type="submit" name="submit" value="Submit" required >
         </form>
     </div>
 <br><br>
     <table >
     <tbody>
-        <tr><td>NIM</td><td>Nama</td><td>Alamat</td></tr>
+        <tr>
+            <td>NIM</td>
+            <td>Nama</td>
+            <td>Prodi</td>
+            <td>Action</td>
+        </tr>
     </tbody>
     <?php foreach ($mahasiswa as $mhs): ?>
         <tr>
             <td><?= $mhs['id'] ?></td>
             <td><?= $mhs['nama'] ?></td>
             <td><?= $mhs['prodi'] ?></td>
+            <td>
+                <a href="index.php?action=edit_mahasiswa&id=<?= $mhs['id'] ?>">Edit</a>
+                <a href="index.php?action=delete_mahasiswa&id=<?= $mhs['id'] ?>">Delete</a>
+            </td>
         </tr>
     <?php endforeach; ?>
     </table>

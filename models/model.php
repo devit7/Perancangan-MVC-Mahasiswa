@@ -1,12 +1,11 @@
 <?php
-include_once("models/mahasiswa.php");
 
 
 class Model{
     public function getMahasiswaList(){
         
         include_once("koneksi.php");
-        $conn = new mysqli($servername, $username_db, $password_db, $dbname);
+       
 
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
