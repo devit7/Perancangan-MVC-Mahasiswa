@@ -28,10 +28,10 @@
     <table >
     <tbody>
         <tr>
-            <td>NIM</td>
-            <td>Nama</td>
-            <td>Prodi</td>
-            <td>Action</td>
+            <th>NIM</th>
+            <th>Nama</th>
+            <th>Prodi</th>
+            <th>Action</th>
         </tr>
     </tbody>
     <?php foreach ($mahasiswa as $mhs): ?>
