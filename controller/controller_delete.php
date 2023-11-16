@@ -9,7 +9,6 @@ class ControllerDelete{
     public function __construct()
     {
         $this->model_delete = new ModelDelete();
-        $this->model_get = new Model();
     }
 
     public function indexDelete(){

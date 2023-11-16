@@ -1,23 +1,18 @@
 <?php
+class ModelEdit {
+    public function getStudentById($id) {
+        include("koneksi.php");
+        $id = $_GET['id'];
+        $query = "SELECT * FROM mahasiswa WHERE id = '$id'";
+        $result = mysqli_query($conn, $query);
 
-    class ModelEdit{
-        public function editMahasiswa(){
-            include_once('koneksi.php');
-
-            $id = $_GET['id'];
-
-            $query = "SELECT * FROM mahasiswa WHERE id = '$id'";
-
-            $result = mysqli_query($conn, $query);
-
-            $row = mysqli_fetch_assoc($result);
-
-            return $row;
-
-            
-
+        $array = array();
+        while ($row = mysqli_fetch_assoc($result)) {
+            $array[] = $row;
         }
-
+        return $array;
     }
 
+    
+}
 ?>

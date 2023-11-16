@@ -12,7 +12,7 @@ class Model{
             echo "Koneksi ke database gagal!";
         }
         $sql = "SELECT * FROM mahasiswa";
-
+        
         $result = $conn->query($sql);
         $array = array();
         while ($row = $result->fetch_assoc()) {
